@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241-srv
+spec:
+  selector:
+    app: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9047
+  type: ClusterIP

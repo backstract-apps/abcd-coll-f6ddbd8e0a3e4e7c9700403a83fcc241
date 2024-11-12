@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241-depl
+  labels:
+    app: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241
+  template:
+    metadata:
+      labels:
+        app: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241
+    spec:
+      containers:
+        - name: abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:abcd-coll-f6ddbd8e0a3e4e7c9700403a83fcc241
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9047
